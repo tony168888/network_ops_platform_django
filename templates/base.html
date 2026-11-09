@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}网络运维平台{% endblock %}</title>
+    <!-- Tabler CSS（CDN 引入，最快） -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0/dist/css/tabler.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons@latest/dist/iconfont/tabler-icons.min.css">
+</head>
+<body>
+    <div class="page">
+        <!-- 顶部导航 -->
+        <header class="navbar navbar-expand-md navbar-dark d-print-none">
+            <div class="container-xl">
+                <h1 class="navbar-brand navbar-brand-autodark">
+                    <a href="/">Network Ops Platform</a>
+                </h1>
+            </div>
+        </header>
+
+        <div class="page-wrapper">
+            <!-- 侧边栏 -->
+            <aside class="sidebar sidebar-dark d-print-none">
+                <div class="sidebar-inner">
+                    <div class="sidebar-menu">
+                        <ul class="menu-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/">
+                                    <span class="nav-link-icon">🏠</span> 首页
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/devices/">
+                                    <span class="nav-link-icon">🖥️</span> 设备管理
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- 主内容区 -->
+            <div class="page-body">
+                <div class="container-xl">
+                    {% block content %}{% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tabler JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0/dist/js/tabler.min.js"></script>
+</body>
+</html>
